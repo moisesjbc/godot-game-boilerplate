@@ -1,0 +1,23 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=3
+
+[application]
+
+config/name="godot-project"
+run/main_scene="res://menus/main_menu/main_menu.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+music_system="*res://globals/music_system/music_system.tscn"
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
