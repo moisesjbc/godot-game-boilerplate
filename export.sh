@@ -1,12 +1,20 @@
 #!/bin/bash
 
-GODOT_EXECUTABLE=/opt/godot-engine/Godot_v3.0.6-stable_x11.64
-
 EXPORT_DIRPATH=`pwd`/export
 ZIP_DIRPATH=`pwd`"/export/zip"
 
 name=$1
 version=$2
+
+if [ -z $GODOT_EXECUTABLE ]; then
+    echo "Environment variable GODOT_EXECUTABLE not set"
+    exit 1
+fi
+
+if [ ! -f $GODOT_EXECUTABLE ]; then
+    echo "Environment variable GODOT_EXECUTABLE points to an invalid file ($GODOT_EXECUTABLE)"
+    exit 1
+fi
 
 if [ -z "$name" ]; then
     echo "ERROR: Expected a name"
