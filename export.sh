@@ -6,13 +6,8 @@ ZIP_DIRPATH=`pwd`"/export/zip"
 name=$1
 version=$2
 
-if [ -z $GODOT_EXECUTABLE ]; then
-    echo "Environment variable GODOT_EXECUTABLE not set"
-    exit 1
-fi
-
-if [ ! -f $GODOT_EXECUTABLE ]; then
-    echo "Environment variable GODOT_EXECUTABLE points to an invalid file ($GODOT_EXECUTABLE)"
+if [ -z "$GODOT_EXECUTABLE" ] || [ ! -f "$GODOT_EXECUTABLE" ]; then
+    echo "ERROR: \$GODOT_EXECUTABLE variable is not set or does not point to valid file [$GODOT_EXECUTABLE]"
     exit 1
 fi
 

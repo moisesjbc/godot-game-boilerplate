@@ -1,6 +1,6 @@
 # godot-game-boilerplate
 
-This is a simple Godot engine project including dummy menus (main menú, credits and how to play) and a dummy main scene.
+This is a simple Godot 3.1 engine project including dummy menus (main menú, credits and how to play) and a dummy main scene.
 
 This project also includes a simple `export.sh` script (Linux only) for exporting project to multiple platforms (Windows, Linux and HTML).
 
