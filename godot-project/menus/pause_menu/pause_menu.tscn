@@ -2,155 +2,52 @@
 
 [ext_resource path="res://menus/pause_menu/pause_menu.gd" type="Script" id=1]
 
-[node name="pause_menu" type="CenterContainer" index="0"]
-
+[node name="pause_menu" type="CenterContainer"]
 pause_mode = 2
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_top = 1.0
 margin_right = 1022.0
 margin_bottom = 603.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-use_top_left = false
 script = ExtResource( 1 )
-_sections_unfolded = [ "Pause", "Rect" ]
 
-[node name="panel" type="Panel" parent="." index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="panel" type="Panel" parent="."]
 margin_left = 361.0
 margin_top = 201.0
 margin_right = 661.0
 margin_bottom = 401.0
 rect_min_size = Vector2( 300, 200 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-_sections_unfolded = [ "Rect" ]
 
-[node name="margin" type="MarginContainer" parent="panel" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="margin" type="MarginContainer" parent="panel"]
 margin_right = 300.0
 margin_bottom = 201.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/margin_right = 50
 custom_constants/margin_top = 50
 custom_constants/margin_left = 50
 custom_constants/margin_bottom = 50
-_sections_unfolded = [ "custom_constants" ]
 
-[node name="layout" type="VBoxContainer" parent="panel/margin" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="layout" type="VBoxContainer" parent="panel/margin"]
 margin_left = 50.0
 margin_top = 50.0
 margin_right = 250.0
 margin_bottom = 151.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/separation = 20
-alignment = 0
-_sections_unfolded = [ "custom_constants" ]
 
-[node name="title" type="Label" parent="panel/margin/layout" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="title" type="Label" parent="panel/margin/layout"]
 margin_right = 200.0
 margin_bottom = 14.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
 text = "GAME PAUSED"
 align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="resume_button" type="Button" parent="panel/margin/layout" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="resume_button" type="Button" parent="panel/margin/layout"]
 margin_top = 34.0
 margin_right = 200.0
 margin_bottom = 54.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Resume game"
-flat = false
-align = 1
 
-[node name="return_button" type="Button" parent="panel/margin/layout" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="return_button" type="Button" parent="panel/margin/layout"]
 margin_top = 74.0
 margin_right = 200.0
 margin_bottom = 94.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Return to main menu"
-flat = false
-align = 1
 
 [connection signal="pressed" from="panel/margin/layout/resume_button" to="." method="_on_resume_button_pressed"]
-
 [connection signal="pressed" from="panel/margin/layout/return_button" to="." method="_on_return_button_pressed"]
-
-
