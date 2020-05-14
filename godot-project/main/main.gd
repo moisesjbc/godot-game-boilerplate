@@ -2,7 +2,7 @@ extends Node2D
 
 signal game_over
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_pressed("ui_pause"):
 		$gui_canvas/pause_menu.pause_game()
 	

@@ -1,5 +1,7 @@
 extends CenterContainer
 
+var SceneUtils = preload("res://scripts/scene_utils.gd")
+
 func run():
 	pause_game()
 
@@ -13,8 +15,8 @@ func unpause_game():
 
 func _on_restart_button_pressed():
 	unpause_game()
-	get_tree().change_scene("res://main/main.tscn")
+	SceneUtils.change_scene(get_tree(), "res://main/main.tscn")
 
 func _on_return_button_pressed():
 	unpause_game()
-	get_tree().change_scene("res://menus/main_menu/main_menu.tscn")
+	SceneUtils.change_scene(get_tree(), "res://menus/main_menu/main_menu.tscn")
