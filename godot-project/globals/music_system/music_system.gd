@@ -7,7 +7,6 @@ enum SoundMode {
 }
 var sound_mode = SoundMode.FULL
 
-
 func toggle_sound_mode():
 	if sound_mode == SoundMode.FULL:
 		sound_mode = SoundMode.FX_ONLY
@@ -19,3 +18,7 @@ func toggle_sound_mode():
 		sound_mode = SoundMode.FULL
 		AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), false)
 		$music.play()
+
+
+func set_volume(volume):
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), volume)

@@ -26,3 +26,7 @@ func print_sound_mode():
 		sound_mode_label = 'MUTED'
 		
 	$center_container/vbox_container/sound_submenu/toggle_sound_button.text = "Toggle sound mode [" + sound_mode_label + "]"
+
+
+func _on_volume_slider_value_changed(value):
+	get_node(music_system_node_path).set_volume(value)
