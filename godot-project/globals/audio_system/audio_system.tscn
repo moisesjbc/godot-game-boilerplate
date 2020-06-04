@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://globals/music_system/music_system.gd" type="Script" id=1]
+[ext_resource path="res://globals/audio_system/audio_system.gd" type="Script" id=1]
 
 [node name="global" type="Node2D"]
 script = ExtResource( 1 )

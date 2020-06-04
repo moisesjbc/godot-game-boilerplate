@@ -21,7 +21,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-music_system="*res://globals/music_system/music_system.tscn"
+audio_system="*res://globals/audio_system/audio_system.tscn"
 
 [input]
 
