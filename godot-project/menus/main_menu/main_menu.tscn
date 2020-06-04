@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://menus/main_menu/main_menu.gd" type="Script" id=1]
+[ext_resource path="res://utils/centered_link/centered_link.tscn" type="PackedScene" id=2]
 
 [node name="main_menu" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -63,12 +64,14 @@ margin_right = 500.0
 margin_bottom = 214.0
 text = "Exit game"
 
-[node name="ludum_dare_label" type="Label" parent="CenterContainer/VBoxContainer"]
+[node name="centered_link" parent="CenterContainer/VBoxContainer" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_top = 234.0
 margin_right = 500.0
 margin_bottom = 248.0
-text = "Made for ..."
-align = 1
+label = "Made for ludum dare..."
+href = "https://ldjam.com/"
 [connection signal="pressed" from="CenterContainer/VBoxContainer/start_game_button" to="." method="_on_start_game_button_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/how_to_play_button" to="." method="_on_how_to_play_button_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/credits_button" to="." method="_on_credits_button_pressed"]
