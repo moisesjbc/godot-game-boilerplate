@@ -11,12 +11,13 @@ __meta__ = {
 }
 
 [node name="link_button" type="LinkButton" parent="."]
-margin_left = 469.0
+margin_left = 496.0
 margin_top = 293.0
-margin_right = 554.0
+margin_right = 527.0
 margin_bottom = 307.0
+hint_tooltip = "Will open a browser window to href"
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "Centered link"
+text = "label"
 __meta__ = {
 "_editor_description_": ""
 }
